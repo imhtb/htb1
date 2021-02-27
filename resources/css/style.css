@@ -1,0 +1,586 @@
+/*=========================
+TEMPLATE NAME:HABIB TAHMID BABU
+TEMPLATE URI:
+AUTHOR:MD HABIBUR RAHMAN
+AUTHOR URI:
+VERSION:1.0
+==============================*/
+/*=========================
+        --- CSS INDEX -----
+1.GOOGLE FONTS
+2.COMMON CSS
+3.REUSABLE COMPONENT
+4.HEADER
+5.ABOUT
+6.PROCESS SECTION
+7.EXPERIENCE SECTION
+8.WORK SECTION
+9. SIGN SECTION
+10.CONTACT SECTION
+11.FOOTER
+==============================*/
+
+/*------- GOOGLE FONTS ------*/
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
+/*------- GOOGLE FONTS FAMILY ------*/
+/* font-family: 'Quicksand', sans-serif; */
+
+/*------- COMMON CSS ------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    background-color: #ffff;
+    color: #000;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 62.5%;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 700;
+    color: #ff0000;
+}
+a:link{
+    text-decoration: none;
+}
+a:hover{
+    text-decoration: none;
+}
+ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.clear-fix {
+    content: '';
+    display: table;
+    clear: both;
+    
+}
+/*------- REUSABLE COMPONENT ------*/
+.container {
+    max-width: 120rem;
+    margin: auto;
+}
+h2 {
+  
+    text-align: center;
+    font-size: 6rem;
+    margin-top: 2rem;
+    margin-bottom: 0;
+}
+.h2ref {
+    text-align: center;
+    font-size: 2rem;
+    display: block;
+    margin-top: 2rem ;
+}
+.btn {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 2.5rem;
+    padding: .8rem 3rem;
+    background: #ff0000;
+    border: 0.1rem solid #ff0000;
+    margin-top: 2rem;
+    transition: all 0.3s ease-in;
+}
+section {
+    padding: 5rem 0;
+}
+
+/*=========================
+    HEADER SECTION
+==============================*/
+header {
+    height: 100vh;
+    background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.7)),url(img/home.jpeg) no-repeat center top / cover;
+    position: relative;  
+}
+#particles-js canvas {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+nav {
+    width: 100%;
+}
+nav .logo {
+    float: left;
+    margin-top: 2rem;  
+    padding-left: 2rem;
+}
+nav .logo img {
+    position: absolute;
+}
+nav .menu {
+    float: right;
+}
+nav .menu ion-icon {
+    position: absolute;
+    top: 4rem;
+    right: 9.5rem;
+    font-size: 4rem;
+    color: #ff0000;
+    border: 0.2rem solid #ff0000;
+}
+/*---MENU */
+.menu-bar{
+    height: 100vh;
+    width: 0%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #000000e0;
+    z-index: 999;
+    overflow: hidden;
+
+}
+.close-btn  ion-icon {
+    font-size: 6rem;
+    color: #ff0000;
+    position: absolute;
+    top: 6rem;
+    right: 5rem;
+}
+.menu-bar ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-transform: capitalize;
+    
+   
+}
+.menu-bar ul li {
+    text-align: center;
+    padding: 0.8rem;
+}
+.menu-bar ul li a {
+    text-decoration: none;
+    text-align: center;
+    color: #ff0000;
+    font-size: 3rem;
+    font-weight: 700;
+    transition: all 0.3s ease-in-out;
+}
+.menu-bar ul li:hover a {
+    color: #ffffff;
+    font-size: 4rem;
+}
+
+/*  ANIMATED HEADLINE */
+.main-content {
+    width: 100%;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.main-content p {
+    font-size: 5rem;
+    color: #ff0000;
+    font-weight: 700;
+}
+.main-content span {
+    color: #fff;
+    font-size: 6rem;
+    font-weight: 300;
+
+   
+}
+.main-content .ah-headline span b {
+    color: #ff0000;
+    font-size: 6rem;
+    font-weight: 200;
+
+}
+.ah-headline.clip .ah-words-wrapper::after {
+    background-color: #ff0000;
+    height: 0;
+}
+
+.arrow-icon {
+    position: absolute;
+    left: 50%;
+    bottom: 12rem;
+}
+.arrow-icon ion-icon {
+    font-size: 4.5rem;
+    color: #ff0000;
+    position: absolute;
+    animation: 2s arrow infinite ease-in-out;
+
+}
+/* --- STICKY MENU-----*/
+nav.uk-sticky-fixed {
+    width: 100%;
+    background-color: #000000d8;
+    padding: 2rem 0;
+
+}
+nav.uk-sticky-fixed .menu ion-icon {
+    top: 1rem;
+
+}
+nav.uk-sticky-fixed .logo img {
+    margin-top: -5rem;
+    
+}
+/*-----ANIMATION ---*/
+@keyframes arrow {
+    0%{
+        top: 1rem;
+    }
+    60%{
+        top: 3rem;
+    }
+    100%{
+        top: 1rem;
+    }
+}
+/*=========================
+         ABOUT
+==============================*/
+#about {
+    width: 100%;
+    position: relative;
+}
+.about-grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap: 1rem;
+}
+.about-grid-item {
+    margin-top: 5rem;
+    position: relative;
+
+}
+.about-grid-item img {
+    height: 40rem;
+    width: 40rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    clip-path: polygon(20% 0%, 80% 0%, 100% 20%, 100% 80%, 80% 100%, 20% 100%, 0% 80%, 0% 20%);
+}
+.about-grid-item h4 {
+    font-size: 2.5rem;
+    color: #000000;
+}
+.about-grid-item p {
+    font-size: 1.6rem;
+    letter-spacing: 0.2rem;
+    line-height: 1.3;
+    color: rgb(0, 0, 0);
+}
+.about-grid-item .btn {
+    display: inline-block;
+    color: #ffffff;
+    font-size: 2.5rem;
+    padding: .8rem 3rem;
+    background: #ff0000;
+    border: 0.1rem solid #ff0000;
+    margin-top: 2rem;
+    transition: all 0.3s ease-in;
+}
+.about-grid-item a:hover {
+    background: transparent;
+    color: #ff0000;
+}
+
+/*=========================
+         PROCESS SECTION
+==============================*/
+#process {
+    position: relative;
+    width: 100%;
+}
+.process-heading {
+    padding-top: 4rem;
+}
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap :1rem;
+}
+.process-grid-item {
+    height: 30rem;
+    width: 100%;
+    margin: auto;
+    background: #ff0000;
+    margin-top: 10rem;
+    text-align: center;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+.process-grid-item:hover {
+    transform: translateY(1rem);
+}
+.process-grid-item ion-icon {
+    font-size: 5rem;
+    margin-top: 9rem;
+    margin-bottom: 2rem;
+    color: #ffff;
+  
+}
+.process-grid-item h6 {
+    font-size: 2rem;
+    margin: 0;
+    color: #ffff;
+}
+.process-grid-item:nth-child(1) {
+    background: #8a1111;
+}
+.process-grid-item:nth-child(2) {
+    background: #e60303;
+}
+.process-grid-item:nth-child(3) {
+    background: #ff0062;
+}
+
+
+
+
+/*=========================
+         EXPERIENCE SECTION
+==============================*/
+#experience {
+    width: 100%;
+    background: url(img/pic2.jpeg)no-repeat center top / cover;
+    background-attachment: fixed;
+    position: relative;
+}
+.ex-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2rem;
+}
+.ex-grid-items {
+    width: 100%;
+    background: rgba(170, 5, 5, 0.534);
+    color: #ffffff;
+    margin-top:10rem ;
+    text-align: left;
+    margin-right: 2rem;
+    padding-left: 1rem;
+}
+.ex-grid-items h4 {
+    margin-top: 5rem;
+    font-size: 3rem;
+}
+.ex-grid-items b {
+    font-size: 2rem;
+    
+}
+.ex-grid-items span {
+    display: block;
+    font-size: 1.6rem;
+    padding: 2rem 0;
+}
+.ex-grid-items p {
+    font-size: 1.5rem;
+}
+.ex-grid-items hr {
+    margin: 2rem 0;
+    color: #ffffff;
+    width: 98%;
+}
+/*=========================
+         WORK SECTION
+==============================*/
+
+#work {
+    width: 100%;
+}
+.work-btn {
+    text-align: center;
+    padding: 4rem 0;
+}
+.work-btn button {
+    font-size:2rem;
+    padding: 1rem 2rem;
+    margin: 0.4rem;
+    border:0.1rem solid #ff0000;
+    background: #ff0000;
+    transition: all 0.3s ease-in-out;
+
+}
+.work-btn button:hover {
+    background-color: black;
+    color: #ff0000;
+}
+.work-grid {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 0.9rem;
+}
+.work-grid-item img {
+    height: 30rem;
+    width: 100%;
+}
+
+/*=========================
+         SIGN SECTION
+==============================*/
+
+#sign {
+    width: 100%;
+    background: #ffd9bd;
+    position: relative;
+}
+.quote img {
+    height: 10rem;
+    width: 10rem;
+}
+.sign-grid {
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-gap:2rem;
+}
+.sign-grid-item {
+    padding-top: 4rem;
+    margin-left: 2rem;
+    position: relative;
+}
+.sign-grid-item p{
+    font-size: 2rem;
+}
+.sign-grid-item .quote img {
+  height: 10rem;
+  width: 12rem;
+}
+.sign-grid-item .signeture img {
+    height: 10rem;
+    width: 12rem;
+  }
+  .sign-grid-item b {
+      font-size: 2.5rem;
+  }
+  .sign-grid-item span {
+      display: block;
+      font-size: 2rem;
+  }
+.signe img {
+    height: 50rem;
+    width: 40rem;
+    position: absolute;
+    top: 0;
+    right:0;
+    left: 0;
+    margin: auto;
+    
+}
+/*=========================
+         CONTACT SECTION
+==============================*/
+#contact {
+    background: url(img/1604150987972-01.jpeg)no-repeat center top / cover;
+    background-attachment: fixed;
+    color: #fff;
+    width: 100%;
+}
+.contact-grid {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 1rem;
+}
+.contact-grid-item:nth-child(1) {
+    margin-top: 3rem;
+    padding: 0 2rem;
+    background: rgba(0, 0, 0, 0.692);
+
+}
+.contact-grid-item h5 {
+    margin: 2rem 0;
+    font-size: 2rem;
+}
+.contact-grid-item b {
+    font-size: 1.2rem;
+}
+.contact-grid-item input {
+    margin: 1rem 0;
+    width: 100%;
+    font-size: 3rem;
+    background: transparent;
+    outline: transparent;
+    color: #fff;
+    border: 0.1rem solid #ff0000;
+    border-radius: 0.3rem;
+}
+.contact-grid-item textarea {
+    width: 100%;
+    height: 30rem;
+    font-size: 3rem;
+    background: transparent;
+    outline: transparent;
+    color: #fff;
+    border: 0.1rem solid #ff0000;
+    border-radius: 0.3rem;
+}
+
+.congrid {
+   display: grid;
+   grid-template-columns: 1fr;
+   grid-gap: 0.1rem;
+}
+.congrid-item {
+    margin-top: 3rem;
+    background: rgba(0, 0, 0, 0.692);
+    padding:2rem;
+}
+.contact-grid .btn {
+    float: right;
+    border-radius: 0.5rem;
+    margin-bottom: 2rem;
+}
+/*=========================
+        FOOTER SECTION
+==============================*/
+footer {
+    background-color: #000;
+    height: 20vh;
+    width: 100%;
+    color: white;
+    position: relative;
+}
+.s-icon ul {
+    text-align: center;
+}
+.s-icon ul li {
+    display: inline-block;
+    padding: 0 0.5rem;
+    margin-top: 2rem;
+}
+.s-icon ul li a  {
+    font-size: 3rem;
+    color: white;
+}
+.s-icon ul li a ion-icon {
+    border-right: 0.1rem solid #fff;
+    padding:0 1rem 0 0;
+}
+.s-icon ul li:last-child a ion-icon{
+    border-right: none;
+}
+.s-icon b {
+    display: block;
+    text-align: center;
+    font-size: 1.6rem;
+    margin-top: 1rem;
+}
+.toptop a {
+    color: #ff0000;
+    width: 100%;
+    margin-top: 1.3rem;
+    text-align: center;
+}
